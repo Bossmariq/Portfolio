@@ -1,0 +1,29 @@
+.aboutmepage h2 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.aboutmepage img {
+  border-radius: 10px;
+}
+.count {
+  font-size: 3rem;
+  color: #d7a274;
+  font-weight: 500;
+}
+.iconSibling {
+  width: 30%;
+  height: 1px;
+  background-color: #a0a0ab;
+}
+.iconParent {
+  border: 2px solid #a0a0ab;
+  padding: 0.25rem 0.4rem 0.1rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.iconParent:hover {
+  border-color: #fff;
+  color: #fff;
+}
