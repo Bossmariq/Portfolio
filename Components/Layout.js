@@ -4,7 +4,7 @@ import About from "./About";
 import Skills from "./Skills/Skills";
 import Projects from "./Projects/Projects";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <>
       <NavBar />
@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
       <section id="Projectssection">
         <Projects />
       </section>
-      {children}
+      {/* {children} */}
     </>
   );
 };
