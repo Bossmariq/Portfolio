@@ -13,7 +13,7 @@ export default function Home() {
           content="Personal Portfolio for Uzoma Victor"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/vimaa.png" />
       </Head>
       <main></main>
     </>

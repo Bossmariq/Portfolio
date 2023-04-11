@@ -33,7 +33,7 @@ const HomePage = () => {
           textArray={textArray}
           cursorColor="#333"
           textColor="rgba(215, 162, 116)"
-          fontSize="28px"
+          fontSize="1.5rem"
           typingSpeed={60}
           delaySpeed={1000}
           height={"40px"}

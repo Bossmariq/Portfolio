@@ -7,13 +7,15 @@ import {
   Container,
   IconButton,
   Button,
+  Icon,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { BsCodeSlash } from "react-icons/bs";
 import { Link, animateScroll as scroll } from "react-scroll";
 import navStyles from "./NavBar.module.css";
 
 const items = ["Home", "About", "Skills", "Projects", "Contact"];
-const NavBar = ({ executeScroll }) => {
+const NavBar = () => {
   const [display, changeDisplay] = useState("none");
   return (
     <Box
@@ -26,11 +28,18 @@ const NavBar = ({ executeScroll }) => {
       color="primary.100"
       p="4"
     >
-      <Container maxW={["200px", "5xl"]}>
+      <Container maxW={["5xl", "5xl"]}>
         <Flex>
-          <Text color="primary.300" fontWeight="bold" fontSize="2xl">
+          <Flex
+            gap={1}
+            alignItems="center"
+            color="primary.300"
+            fontWeight="bold"
+            fontSize="2xl"
+          >
+            <Icon as={BsCodeSlash} />
             <Link to="/">Victor</Link>
-          </Text>
+          </Flex>
           <Spacer />
           <Box flex="1">
             <Flex
@@ -102,6 +111,7 @@ const NavBar = ({ executeScroll }) => {
                 <Button
                   color="secondary.500"
                   colorScheme="transparent"
+                  onClick={() => changeDisplay("none")}
                   aria-label={item}
                   my={5}
                   w="100%"
