@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Layout from "@/pages/Components";
+import Layout from "@/Components/Layout";
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";

@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
       <section id="Aboutsection">
         <AboutPage />
       </section>
-      {children}
+      <main>{children}</main>
       <section id="Skillssection">
         <Skills />
       </section>

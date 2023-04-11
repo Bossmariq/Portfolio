@@ -25,6 +25,7 @@ const IndividualProject = ({
           <Flex gap={3}>
             {icons.map((icon) => (
               <Icon
+                key={icon}
                 color="primary.300"
                 fontSize={["2xl", "3xl", "2xl"]}
                 as={icon}
