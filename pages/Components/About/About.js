@@ -1,7 +1,7 @@
 import AboutInfo from "./AboutInfo";
 import { Box, Container, Flex } from "@chakra-ui/react";
 import Image from "next/image";
-import profilePic from "../../public/profile-pic.jpeg";
+import profilePic from "../../../public/profile-pic.jpeg";
 import styles from "./About.module.css";
 
 const AboutPage = () => {

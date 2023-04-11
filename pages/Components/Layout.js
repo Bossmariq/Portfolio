@@ -1,6 +1,6 @@
 import NavBar from "./NavBar";
 import HomePage from "./Home/Home";
-import About from "./About";
+import AboutPage from "./About/About";
 import Skills from "./Skills/Skills";
 import Projects from "./Projects/Projects";
 
@@ -12,7 +12,7 @@ const Layout = () => {
         <HomePage />
       </section>
       <section id="Aboutsection">
-        <About />
+        <AboutPage />
       </section>
       <section id="Skillssection">
         <Skills />

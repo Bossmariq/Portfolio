@@ -1,9 +1,9 @@
-import drumKit from "../../public/drumkit.png";
-import linkShortener from "../../public/link shortener.png";
-import mealsSite from "../../public/meals app.png";
-import mmaogo from "../../public/mmaogo.png";
-import ritazbeauty from "../../public/ritazbeauty.png";
-import santaFE from "../../public/santaFE.png";
+import drumKit from "../../../public/drumkit.png";
+import linkShortener from "../../../public/link shortener.png";
+import mealsSite from "../../../public/meals app.png";
+import mmaogo from "../../../public/mmaogo.png";
+import ritazbeauty from "../../../public/ritazbeauty.png";
+import santaFE from "../../../public/santaFE.png";
 // import smartech from "../../public/smartech.png";
 // import allocationSite from "../../public/teammember allocation.png";
 import { SiFramer, SiTailwindcss } from "react-icons/si";
