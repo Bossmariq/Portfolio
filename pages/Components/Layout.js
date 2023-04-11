@@ -4,7 +4,7 @@ import AboutPage from "./About/About";
 import Skills from "./Skills/Skills";
 import Projects from "./Projects/Projects";
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <>
       <NavBar />
@@ -14,13 +14,13 @@ const Layout = () => {
       <section id="Aboutsection">
         <AboutPage />
       </section>
+      {children}
       <section id="Skillssection">
         <Skills />
       </section>
       <section id="Projectssection">
         <Projects />
       </section>
-      {/* {children} */}
     </>
   );
 };
