@@ -1,9 +1,7 @@
-import { useEffect } from "react";
 import Layout from "@/Components/Layout";
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
-import AOS from "aos";
 
 const colors = {
   primary: {
@@ -34,9 +32,6 @@ const colors = {
 const theme = extendTheme({ colors });
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    AOS.init();
-  });
   return (
     <ChakraProvider theme={theme}>
       <Layout>

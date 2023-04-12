@@ -1,4 +1,5 @@
 import AboutInfo from "./AboutInfo";
+import AnimateHeading from "../AnimateHeading";
 import { Box, Container, Flex } from "@chakra-ui/react";
 import Image from "next/image";
 import profilePic from "@/public/profile-pic.jpeg";
@@ -16,7 +17,7 @@ const AboutPage = () => {
       alignItems="center"
     >
       <Container maxW="5xl" color="secondary.200">
-        <h2>About Me</h2>
+        <AnimateHeading title="About Me" textPosition="left" />
         <Flex gap={20} flexDir={["column-reverse", "column-reverse", "row"]}>
           <AboutInfo />
           <div>

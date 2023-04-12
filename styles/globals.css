@@ -29,6 +29,15 @@ body {
 a {
   text-decoration: none;
 }
+.alert {
+  color: red;
+  font-size: 0.75rem;
+}
+input,
+textarea {
+  border: none !important;
+  box-shadow: 0px 0px 8px rgb(255, 255, 255);
+}
 
 @media (prefers-color-scheme: dark) {
   /* html {

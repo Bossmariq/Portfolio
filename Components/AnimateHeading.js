@@ -1,7 +1,8 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import skillstyle from "./Skills.module.css";
+import skillstyle from "./Skills/Skills.module.css";
+import { Text } from "@chakra-ui/react";
 
 const boxVariant = {
   visible: {
@@ -17,7 +18,7 @@ const boxVariant = {
   hidden: { opacity: 0, x: "-50vw" },
 };
 
-const SkillsHeading = () => {
+const AnimateHeading = ({ title, textPosition }) => {
   const control = useAnimation();
   const [ref, inView] = useInView();
   useEffect(() => {
@@ -30,10 +31,10 @@ const SkillsHeading = () => {
   return (
     <div className={skillstyle.content} ref={ref}>
       <motion.h2 variants={boxVariant} initial="hidden" animate={control}>
-        My Skills
+        <Text textAlign={textPosition}>{title}</Text>
       </motion.h2>
     </div>
   );
 };
 
-export default SkillsHeading;
+export default AnimateHeading;

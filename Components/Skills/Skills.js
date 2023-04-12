@@ -17,7 +17,7 @@ import {
   DiMaterializecss,
   DiJavascript1,
 } from "react-icons/di";
-import SkillsHeading from "./SkillsHeading";
+import AnimateHeading from "../AnimateHeading";
 import skillstyles from "./Skills.module.css";
 
 const mySkils = [
@@ -71,7 +71,7 @@ const Skills = () => {
       py={20}
     >
       <Container maxW="5xl">
-        <SkillsHeading />
+        <AnimateHeading title="My Skills" textPosition="center" />
         <motion.div
           className={skillstyles.skillcards}
           ref={ref}

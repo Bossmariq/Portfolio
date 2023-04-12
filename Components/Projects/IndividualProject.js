@@ -15,7 +15,7 @@ const IndividualProject = ({
     <Box width="full" bg="secondary.700" borderRadius={15} p={4}>
       <Flex gap={5} flexDir={direction}>
         <Box flex={3}>
-          <Image src={img} />
+          <Image alt={title} style={{ borderRadius: "15px" }} src={img} />
         </Box>
         <Box flex={2} py={2}>
           <Text color="gray.100" fontWeight="bold" fontSize="3xl">
