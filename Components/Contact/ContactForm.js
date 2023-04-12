@@ -7,9 +7,12 @@ import {
   Input,
   Textarea,
   Button,
+  useToast,
 } from "@chakra-ui/react";
+import { send } from "emailjs-com";
 
 const ContactForm = () => {
+  const toast = useToast();
   const {
     control,
     register,
@@ -25,6 +28,20 @@ const ContactForm = () => {
   });
   const onSubmit = (data) => {
     console.log(data);
+    send("service_s4y43p8", "contact_form", data, "DZpIG77L8e3NnuBN8")
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
+    toast({
+      title: "Message Sent.",
+      description: "We've sent your message.",
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+    });
     reset();
   };
 
@@ -118,10 +135,10 @@ const ContactForm = () => {
             translateY: "-5px",
           }}
           transition={{ type: "spring", stiffness: 300 }}
+          type="submit"
         >
           <Button
-            type="submit"
-            as="button"
+            as="a"
             colorScheme="secondary"
             size="md"
             width="100%"

@@ -47,9 +47,9 @@ const HomePage = () => {
           rightIcon={<DownloadIcon />}
           colorScheme="secondary"
           as="a"
-          // download="My Resume"
+          download="My_Resume"
           target="_blank"
-          href="../../public/workCV.pdf"
+          href="@/public/workCV.pdf"
           size="lg"
         >
           Resume
