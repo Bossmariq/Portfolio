@@ -2,6 +2,7 @@ import Layout from "@/Components/Layout";
 import "@/styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 
 const colors = {
   primary: {
@@ -28,8 +29,12 @@ const colors = {
   },
   light: { 100: "#fse9ce" },
 };
+const config = {
+  initialColorMode: "dark",
+  useSystemColorMode: true,
+};
 
-const theme = extendTheme({ colors });
+export const theme = extendTheme({ colors, config });
 
 export default function App({ Component, pageProps }) {
   return (

@@ -3,13 +3,14 @@ import {
   Flex,
   Spacer,
   Box,
-  Text,
   Container,
   IconButton,
   Button,
   Icon,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, CloseIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { BsCodeSlash } from "react-icons/bs";
 import { Link, animateScroll as scroll } from "react-scroll";
 import navStyles from "./NavBar.module.css";
@@ -17,6 +18,10 @@ import navStyles from "./NavBar.module.css";
 const items = ["Home", "About", "Skills", "Projects", "Contact"];
 const NavBar = () => {
   const [display, changeDisplay] = useState("none");
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  const bg = useColorModeValue("secondary.900", "gray.100");
+  const color = useColorModeValue("primary.100", "primary.900");
   return (
     <Box
       className={navStyles.navbar}
@@ -24,8 +29,8 @@ const NavBar = () => {
       w="100%"
       zIndex={2}
       position="fixed"
-      bg="secondary.900"
-      color="primary.100"
+      bg={bg}
+      color={color}
       p="4"
     >
       <Container maxW={["5xl", "5xl"]}>
@@ -45,7 +50,7 @@ const NavBar = () => {
             <Flex
               as="ul"
               justifyContent="space-evenly"
-              alignItems="start"
+              alignItems="center"
               display={["none", "none", "flex", "flex"]}
             >
               {items.map((item, index) => (
@@ -63,15 +68,33 @@ const NavBar = () => {
                   </Link>
                 </li>
               ))}
+              <IconButton
+                icon={colorMode === "light" ? <SunIcon /> : <MoonIcon />}
+                colorScheme="primary.300"
+                fontSize="xl"
+                onClick={toggleColorMode}
+              ></IconButton>
             </Flex>
           </Box>
           <IconButton
-            colorScheme="primary.700"
+            colorScheme={useColorModeValue("primary.700", "secondary.900")}
             aria-label="mobile menu"
-            icon={<HamburgerIcon color="primary.100" fontSize="3xl" />}
+            icon={
+              <HamburgerIcon
+                color={useColorModeValue("primary.100", "secondary.900")}
+                fontSize="3xl"
+              />
+            }
             onClick={() => changeDisplay("flex")}
             display={["flex", "flex", "none", "none"]}
           />
+          <IconButton
+            icon={colorMode === "light" ? <SunIcon /> : <MoonIcon />}
+            colorScheme="primary.300"
+            fontSize="xl"
+            onClick={toggleColorMode}
+            display={["flex", "flex", "none", "none"]}
+          ></IconButton>
         </Flex>
         <Flex
           w="100vw"

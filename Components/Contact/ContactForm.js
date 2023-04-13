@@ -27,7 +27,6 @@ const ContactForm = () => {
     },
   });
   const onSubmit = (data) => {
-    console.log(data);
     send("service_s4y43p8", "contact_form", data, "DZpIG77L8e3NnuBN8")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
