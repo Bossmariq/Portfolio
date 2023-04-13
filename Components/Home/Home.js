@@ -70,8 +70,6 @@ const HomePage = () => {
             colorScheme="secondary"
             as="a"
             download="Victor_Uzoma's_CV"
-            rel="noopener noreferrer"
-            locale={false}
             target="_blank"
             href="/workCV.pdf"
             size="lg"
