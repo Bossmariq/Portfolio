@@ -69,9 +69,11 @@ const HomePage = () => {
             rightIcon={<DownloadIcon />}
             colorScheme="secondary"
             as="a"
-            download="My_Resume"
+            download="Victor_Uzoma's_CV"
+            rel="noopener noreferrer"
+            locale={false}
             target="_blank"
-            href="@/public/workCV.pdf"
+            href="/workCV.pdf"
             size="lg"
           >
             Resume
