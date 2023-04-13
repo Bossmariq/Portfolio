@@ -25,7 +25,6 @@ const HomePage = () => {
   const textArray = [
     "FrontEnd Developer",
     "Designer",
-    "Aspiring FullStack Developer",
     "Dental Technologist",
     "Teacher",
   ];
