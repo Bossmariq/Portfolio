@@ -17,9 +17,9 @@ export const boxVariant2 = {
     y: 0,
     transition: {
       type: "tween",
-      duration: 1.5,
-      delay: 0.7,
+      duration: 2,
+      delay: 1,
     },
   },
-  hidden: { opacity: 0, y: "20vw" },
+  hidden: { opacity: 0, y: "40vw" },
 };
