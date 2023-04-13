@@ -1,11 +1,16 @@
-import { Icon, Flex, Box } from "@chakra-ui/react";
+import { Icon, Flex, Box, useColorModeValue } from "@chakra-ui/react";
 
 const SkillIconCard = ({ name }) => {
   return (
-    <Box bg="secondary.600" borderRadius="2xl" p={[4, 6, 8]}>
+    <Box
+      bg={useColorModeValue("secondary.600", "gray.100")}
+      boxShadow="lg"
+      borderRadius="2xl"
+      p={[4, 6, 8]}
+    >
       <Flex alignItems="center" justifyContent="center">
         <Icon
-          color="primary.300"
+          color={useColorModeValue("primary.300", "primary.700")}
           fontSize={["5xl", "5xl", "7xl"]}
           as={name}
         ></Icon>

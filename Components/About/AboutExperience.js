@@ -1,12 +1,15 @@
 import CountUp, { useCountUp } from "react-countup";
-import { Flex } from "@chakra-ui/react";
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react";
 import styles from "./About.module.css";
 
 const AboutExperience = () => {
   return (
     <Flex gap={["1", "10", "20"]} mt="8">
       <div>
-        <p className={styles.count}>
+        <Box
+          color={useColorModeValue("primary.300", "primary.700")}
+          className={styles.count}
+        >
           <CountUp
             end={3}
             enableScrollSpy
@@ -14,11 +17,14 @@ const AboutExperience = () => {
             scrollSpyDelay="1000"
           />
           +
-        </p>
+        </Box>
         <p>YEARS OF EXPERIENCE</p>
       </div>
       <div>
-        <p className={styles.count}>
+        <Box
+          color={useColorModeValue("primary.300", "primary.700")}
+          className={styles.count}
+        >
           <CountUp
             end={23}
             enableScrollSpy
@@ -26,7 +32,7 @@ const AboutExperience = () => {
             scrollSpyDelay="1000"
           />
           +
-        </p>
+        </Box>
         <p>PROJECTS DONE</p>
       </div>
     </Flex>

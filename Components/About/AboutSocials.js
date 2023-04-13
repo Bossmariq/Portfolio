@@ -1,4 +1,4 @@
-import { Flex, Icon } from "@chakra-ui/react";
+import { Flex, Icon, useColorModeValue } from "@chakra-ui/react";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -30,7 +30,12 @@ const AboutSocials = () => {
               transition={{ type: "spring", stiffness: 300 }}
               className={styles.iconParent}
             >
-              <Link as="a" href={link} target="_blank">
+              <Link
+                color={useColorModeValue("#fff", "primary.900")}
+                as="a"
+                href={link}
+                target="_blank"
+              >
                 <Icon as={icon} />
               </Link>
             </motion.div>

@@ -1,12 +1,13 @@
 import IndividualProject from "./IndividualProject";
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Container, Flex, useColorModeValue } from "@chakra-ui/react";
 import { ProjectData } from "./ProjectsData";
 import AnimateHeading from "../AnimateHeading";
 
 const Projects = () => {
+  const bg = useColorModeValue("secondary.900", "#fff");
   return (
     <Box
-      bg="secondary.900"
+      bg={bg}
       minH="80vh"
       px="4"
       as="section"

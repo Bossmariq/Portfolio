@@ -8,6 +8,7 @@ import {
   Textarea,
   Button,
   useToast,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { send } from "emailjs-com";
 
@@ -44,13 +45,19 @@ const ContactForm = () => {
     reset();
   };
 
+  const boxShadow = useColorModeValue(
+    "0px 0px 8px rgb(255, 255, 255)",
+    "0 0 10px 0 rgba(0,0,0,0.45)"
+  );
+  const color = useColorModeValue("primary.300", "primary.700");
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <Flex
         flexDir="column"
         gap={5}
         w={["100%", "100%", "sm", "lg"]}
-        color="primary.300"
+        color={color}
       >
         <Controller
           name="firstName"
@@ -59,6 +66,7 @@ const ContactForm = () => {
             <FormControl w="full">
               <FormLabel>Your Name</FormLabel>
               <Input
+                boxShadow={boxShadow}
                 outline="none"
                 placeholder="Enter name"
                 {...field}
@@ -86,6 +94,7 @@ const ContactForm = () => {
               <FormLabel>Email address</FormLabel>
               <Input
                 placeholder="Enter Email"
+                boxShadow={boxShadow}
                 {...field}
                 {...register("email", {
                   required: "Email is required",
@@ -110,6 +119,7 @@ const ContactForm = () => {
             <FormControl>
               <FormLabel>Your Message</FormLabel>
               <Textarea
+                boxShadow={boxShadow}
                 placeholder="Hey there! Send a message"
                 {...field}
                 {...register("yourmessage", {
@@ -141,7 +151,7 @@ const ContactForm = () => {
             colorScheme="secondary"
             size="md"
             width="100%"
-            color="primary.300"
+            color={color}
           >
             Submit
           </Button>

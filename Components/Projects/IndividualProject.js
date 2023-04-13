@@ -1,5 +1,13 @@
 import Image from "next/image";
-import { Box, Flex, Text, Icon, Divider, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Icon,
+  Divider,
+  Button,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import { FiExternalLink } from "react-icons/fi";
 
@@ -11,28 +19,32 @@ const IndividualProject = ({
   sitelink,
   direction,
 }) => {
+  const bg = useColorModeValue("secondary.700", "gray.200");
+  const bgTextColor = useColorModeValue("gray.100", "gray.800");
+  const iconsColor = useColorModeValue("primary.300", "primary.700");
+  const infoColor = useColorModeValue("gray.300", "gray.700");
   return (
-    <Box width="full" bg="secondary.700" borderRadius={15} p={4}>
+    <Box width="full" bg={bg} borderRadius={15} p={4}>
       <Flex gap={5} flexDir={direction}>
         <Box flex={3}>
           <Image alt={title} style={{ borderRadius: "15px" }} src={img} />
         </Box>
         <Box flex={2} py={2}>
-          <Text color="gray.100" fontWeight="bold" fontSize="3xl">
+          <Text color={bgTextColor} fontWeight="bold" fontSize="3xl">
             {title}
           </Text>
-          <Divider my={4} />
+          <Divider bg="#000" my={4} />
           <Flex gap={3}>
             {icons.map((icon) => (
               <Icon
                 key={icon}
-                color="primary.300"
+                color={iconsColor}
                 fontSize={["2xl", "3xl", "2xl"]}
                 as={icon}
               />
             ))}
           </Flex>
-          <Text color="gray.300" fontSize="md" my={5}>
+          <Text color={infoColor} fontSize="md" my={5}>
             {info}
           </Text>
           <motion.button
@@ -48,7 +60,7 @@ const IndividualProject = ({
               target="_blank"
               colorScheme="secondary"
               size="md"
-              color="primary.300"
+              color={useColorModeValue("primary.300", "primary.700")}
             >
               <Icon mr={1} as={FiExternalLink} />
               Live

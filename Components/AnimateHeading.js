@@ -2,7 +2,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import skillstyle from "./Skills/Skills.module.css";
-import { Text } from "@chakra-ui/react";
+import { Text, useColorModeValue } from "@chakra-ui/react";
 import { boxVariant1 } from "./Variants";
 
 const AnimateHeading = ({ title, textPosition }) => {
@@ -18,7 +18,12 @@ const AnimateHeading = ({ title, textPosition }) => {
   return (
     <div className={skillstyle.content} ref={ref}>
       <motion.h2 variants={boxVariant1} initial="hidden" animate={control}>
-        <Text textAlign={textPosition}>{title}</Text>
+        <Text
+          color={useColorModeValue("#fff", "secondary.900")}
+          textAlign={textPosition}
+        >
+          {title}
+        </Text>
       </motion.h2>
     </div>
   );

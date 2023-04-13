@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Container, useColorModeValue } from "@chakra-ui/react";
 import SkillIconCard from "./SkillIconCard";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -40,7 +40,6 @@ const container = {
     transition: {
       delayChildren: 1,
       staggerChildren: 0.3,
-      ease: "easeIn",
     },
   },
 };
@@ -60,9 +59,10 @@ const Skills = () => {
     }
   }, [control, inView]);
 
+  const bg = useColorModeValue("secondary.800", "gray.50");
   return (
     <Box
-      bg="secondary.800"
+      bg={bg}
       minH="80vh"
       px="4"
       as="section"
