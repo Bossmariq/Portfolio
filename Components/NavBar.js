@@ -20,11 +20,12 @@ const NavBar = () => {
   const [display, changeDisplay] = useState("none");
   const { colorMode, toggleColorMode } = useColorMode();
 
-  const bg = useColorModeValue("secondary.900", "gray.100");
+  const bg = useColorModeValue("secondary.900", "gray.50");
   const color = useColorModeValue("primary.100", "primary.900");
   return (
     <Box
       className={navStyles.navbar}
+      boxShadow="xl"
       as="nav"
       w="100%"
       zIndex={2}
