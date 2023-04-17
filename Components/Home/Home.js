@@ -25,8 +25,8 @@ const HomePage = () => {
   const textArray = [
     "FrontEnd Developer",
     "Designer",
-    "Dental Technologist",
-    "Teacher",
+    "HTML/CSS",
+    "JavaScript/React.js/Next.js",
   ];
   const bg = useColorModeValue("secondary.800", "gray.50");
   const color = useColorModeValue("primary.300", "primary.900");
